@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto</title>
+</head>
+<body>
+    <h1>NACIONALIDADE</h1>
+    Você é de qual pais? <input type="text" id="txtpais">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+           var txtp = window.document.getElementById('txtpais').value
+           var res = window.document.getElementById('res')
+           
+           res.innerHTML = (`<br> Você é do pais ${txtp}`)
+           if (txtp.toLowerCase() === "Brasil" || txtp.toLowerCase() === "brasil") {
+            res.innerHTML += "<p>vocé é Brasileiro</p>";
+           } else {
+            res.innerHTML += "<p>Você é estrangeiro.</p>";
+           }
+        
+        }
+    </script>
+    
+</body>
+</html>
